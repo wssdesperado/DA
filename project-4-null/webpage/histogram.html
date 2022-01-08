@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Histogram</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/animations.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <script src="static/js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+         <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+<section id="header">
+    <div class="container"><div class="row">
+
+       <a class="navbar-brand" href=""><img src="static/picture/logo.jpg" weight = 135 height= 50 alt="">  Group Null</a>
+
+      <div class="col-sm-12 mainmenu_wrap"><div class="main-menu-icon visible-xs"><span></span><span></span><span></span></div>
+        <ul id="mainmenu" class="nav menu sf-menu responsive-menu superfish">
+          <li class="active">
+            <a href= "index.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="introduction.html">Intro</a>
+          <li class="dropdown">
+            <a href="data-collection.html">Data</a>
+            <ul class="nav dropdown-menu">
+              <li class="">
+                <a href="data-collection.html">Collection</a>
+              </li>
+              <li class="">
+                <a href="data-cleaning.html">Cleaning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="Analysis.html">Analysis</a>
+          </li>  
+
+          <li class="">
+             <a href="conclusion.html">Conclusion</a>
+          </li>		  
+
+        </ul>
+      </div>
+      
+    </div></div>
+</section>
+
+
+
+<div id="box_wrap">
+
+<section id="abovecontent" class="grey_section">
+  <div class="container"><div class="row">
+      <div class="block col-sm-12">
+        <ul class="breadcrumb">
+          <li><a href="#" class="pathway">Home</a></li>
+          <li><span>Analysis / Histograms and Correlations</span></li>
+        </ul>
+      </div>
+  </div></div>
+</section>
+
+
+<section id="middle" class="">
+    <div class="container">
+
+
+        <h2 class="heading-39291">Histograms and Correlations</h2>
+		<p><br></p>
+        <p>In this section we plot 'date', 'loc_id', 'confirmed', 'deaths' four variables’ histograms. Here are the results. The attribute 'loc_id' stands for the id of the locations. And for convince of analysis, we convert the attribute 'date' to number 0 to 400. <br>Here are the result:</p>
+		<div><img src="images/histogram1.jpg" alt="Image" class="img-fluid" width = "950" height = "470"></div>
+        <p>These two histograms separately show the distribution of the data set in regions and dates. The number of reports from different regions have differences, and it might influence the results of the cluster. For the second histogram, the number of statistical reports on different dates is relatively similar in quantity, which avoids differences due to the number of reports on different dates. For distribution of confirmed variables and deaths, the results are the same as basic analysis for those two variables in the basic analysis part. In most reports, the number of confirmed people and deaths are relatively low.</p>
+        <p>Those three tables are the correlations between all the pairs of dates, deaths_daily, confirmed_daily variables:</p>
+        <div><img src="images/histogram2.png" alt="Image" class="img-fluid" width = "950" height = "700"></div>
+        <p>The first two tables show the epidemic situation changes over time, and have two peaks, the dates of deaths_daily peak is a little behind the dates of confirmed_daily. It is reasonable in reality. And the third table reflects the relation between confirmed deaths_daily, the two of them are positively correlated most of the time. However, sometimes, the number of confirmed deaths daily is low, the number of deaths daily is high. It might be because of the delay between the confirmation and deaths.</p>
+        <p>For addition, we also plot the correlations between deaths, confirmed and date. The number of deaths and confirmed people increases over time, and deaths and confirmed are positively correlated.</p>
+        <div><img src="images/histogram3.png" alt="Image" class="img-fluid" width = "950" height = "350"></div>
+        <p>To determine the boundary value of the binning strategy, we drew a picture of the sentiment distribution. As is shown in the valence intensity histogram, throughout the pandemic period, the proportion of negative emotions (around 0.4) is the largest. For the other four emotions, most of the data are concentrated between 0.3 and 0.6.</p>
+        <div><img src="images/histogram4.png" alt="Image" class="img-fluid" width = "1000" height = "500"></div>
+		<p> </p>
+    </div>
+	
+		<div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="Analysis.html"  class="theme_btn">Back</a></p>
+			</div>
+		 <div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="cluster.html"  class="theme_btn">Next</a></p>
+  </div>
+
+</div></div></section>
+
+
+
+</div></div></section>
+<section id="copyright" class="dark_section">
+  <div class="container"><div class="row">
+    
+
+    <div class="col-sm-12">
+      <p id="social" class="text-center"></p >
+
+      <p class="text-center">Copyright &copy; 2021.Group Null All rights reserved.</p >
+    </div>
+
+  </div></div>
+</section>
+
+</div><!-- EOF #box_wrap -->
+
+<div id="gallery_container"></div>
+
+<!-- <div class="preloader">
+  <div class="preloaderimg"></div>
+</div>
+ -->
+  
+        <script src="static/js/respond.min.js"></script>
+        <script src="static/js/placeholdem.min.js"></script>
+        <script src="static/js/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/hoverIntent.js"></script>
+        <script src="static/js/superfish.js"></script>
+        <script src="static/js/jquery.actual.min.js"></script>
+        <script src="static/js/jquery.elastislide.js"></script>
+        <script src="static/js/jquery.flexslider-min.js"></script>
+        <script src="static/js/jquery.prettyPhoto.js"></script>
+        <script src="static/js/jquery.easing.1.3.js"></script>
+        <script src="static/js/jquery.ui.totop.js"></script>
+        <script src="static/js/jquery.isotope.min.js"></script>
+        <script src="static/js/jquery.easypiechart.min.js"></script>
+        <script src='static/js/jflickrfeed.min.js'></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src='static/js/owl.carousel.min.js'></script>
+        <script src='static/js/jquery.nicescroll.min.js'></script>
+        <script src='static/js/jquery.fractionslider.min.js'></script>
+        <script src='static/js/jquery.scrollTo-min.js'></script>
+        <script src='static/js/jquery.localscroll-min.js'></script>
+        <script src='static/js/jquery.parallax-1.1.3.js'></script>
+        <script src='static/js/jquery.tweet.min.js'></script>
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+
+        <script type="text/javascript" src="static/js/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "ur-6a7e320d-37d8-511-633d-4264e3ae8c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    </body>
+</html>

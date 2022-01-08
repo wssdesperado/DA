@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Data Collection</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/animations.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <script src="static/js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+         <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+
+<section id="header">
+    <div class="container"><div class="row">
+
+       <a class="navbar-brand" href=""><img src="static/picture/logo.jpg" weight = 135 height= 50 alt="">  Group Null</a>
+
+      <div class="col-sm-12 mainmenu_wrap"><div class="main-menu-icon visible-xs"><span></span><span></span><span></span></div>
+        <ul id="mainmenu" class="nav menu sf-menu responsive-menu superfish">
+          <li class="active">
+            <a href= "index.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="introduction.html">Intro</a>
+          <li class="dropdown">
+            <a href="data-collection.html">Data</a>
+            <ul class="nav dropdown-menu">
+              <li class="">
+                <a href="data-collection.html">Collection</a>
+              </li>
+              <li class="">
+                <a href="data-cleaning.html">Cleaning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="Analysis.html">Analysis</a>
+          </li>  
+
+          <li class="">
+             <a href="conclusion.html">Conclusion</a>
+          </li>		  
+
+        </ul>
+      </div>
+      
+    </div></div>
+</section>
+
+
+<div id="box_wrap">
+
+<section id="abovecontent" class="grey_section">
+  <div class="container"><div class="row">
+      <div class="block col-sm-12">
+        <ul class="breadcrumb">
+          <li><a href="#" class="pathway">Home</a></li>
+          <li><span>Introduction</span></li>
+        </ul>
+      </div>
+  </div></div>
+</section>
+
+
+<section id="middle" class=""><div class="container"><div class="row blog">
+
+
+
+  <div class="col-sm-9">
+    <div class="content-area" id="primary">
+      <div role="main" class="site-content" id="content">
+        <article class="post format-standard">
+          <header class="entry-header">
+            <h2 class="entry-title">
+              <a href="blog-single.html" rel="bookmark">Data Cleaning</a>
+            </h2>
+            </div>
+            <!-- .entry-meta --> 
+          </header>
+          <!-- .entry-header -->
+          <p> <br> </p>
+          <div class="entry-content">
+		  <ol>
+		    <li style="font-weight:bold;">The Twitter-COVID-dataset</li>
+            <p>In Twitter-COVID-dataset, the range of emotional intensity is between [0,1]. Values close to 0 mean that the tweet does not express too much of this sentiment, and values close to 1 means that it contains an extremely intense sentiment. During the cleanliness, fortunately, no data is empty. However, 2763 tweets contain at least one kind of score out of this rage. It is found that these data are in the range of [-1,0] or [1,2]. We guess that it is because the sentiment intensity score is obtained from CrystalFeel, so a small part of the data will exceed the given range. A negative score or score greater than 1 might indicate no relationship or unusually extreme emotions, so we currently treat those data as noise, unless this part of extreme data is needed in future study.
+			</p>
+			<div class="entry-thumbnail">
+            <img alt="" src="static/picture/twitter-clean-table.png">
+            </div>
+            <li style="font-weight:bold;">MongoDB COVID-19 Open Data Set</li>
+			<p>The MongoDB COVID-19 open dataset provides fairly clean data.We write a program to collect the missing values and there is no missing value. And according to the data attributes such as deaths, daily_deaths, confirmed, and daily confirmed, firstly, all of these attributes must be positive and the number of deaths should be bigger than the number of daily deaths(same in daily confirmed and confirmed). These are some noises in the dataset.
+			</p>
+			<div class="entry-thumbnail">
+            <img alt="" src="static/picture/mongo-table.png">
+            </div>
+			<li style="font-weight:bold;">The COVID Tracking Project</li>
+			<p>Most of the data of the COVID Tracking Project API are numbers. By observation we find there are many null values (the official docs explains that returns null means there is no data available). Some of the number data should not be negative. So we compute the fraction of null values of some important variables. And count the number of negative values. Now we haven’t found noise in this data set.
+			</p>
+			<div class="entry-thumbnail">
+            <img alt="" src="static/picture/covid-track-table.png">
+            </div>
+			
+			<li style="font-weight:bold;">The Covid Act Now API</li>
+			<p>Since the data sources of the Covid Act Now API are relatively official, the proportion of noise in the data set is very low. On the contrary, when analyzing the response, we found that the phenomenon of missing values is more common. For data loss, we think there are two important reasons. First, variables such as vaccinations_initiated_ratio, vaccinations_completed_ratio, vaccines_distributed，vaccinations_initiated，vaccinations_competed，vaccines_administeredare statistical data collected sometime after the outbreak of COVID19, therefore, there is no relevant information in the early data, which affects The missing rate. Second, part of the data returned by the api actually comes from other data sources. These data sources may have missing data or do not support searching for historical data. In summary, although the calculated fraction of missing values is relatively low, the data is relatively complete and will not affect subsequent work.
+			</p>
+			<p> <br> </p>
+
+		  </ol>
+          </div>
+		  	<div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="data-collection.html"  class="theme_btn">Back</a></p>
+			</div>
+		 <div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="Analysis.html"  class="theme_btn">Next</a></p>
+			</div>
+      </div>
+      <!-- #content --> 
+    </div>
+  </div>
+
+
+</div></div></section>
+
+
+</div></div></section>
+<section id="copyright" class="dark_section">
+  <div class="container"><div class="row">
+    
+
+    <div class="col-sm-12">
+      <p id="social" class="text-center"></p >
+
+      <p class="text-center">Copyright &copy; 2021.Group Null All rights reserved.</p >
+    </div>
+
+  </div></div>
+</section>
+
+
+</div><!-- EOF #box_wrap -->
+
+<div id="gallery_container"></div>
+
+<!-- <div class="preloader">
+  <div class="preloaderimg"></div>
+</div>
+ -->
+  
+        <script src="static/js/respond.min.js"></script>
+        <script src="static/js/placeholdem.min.js"></script>
+        <script src="static/js/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/hoverIntent.js"></script>
+        <script src="static/js/superfish.js"></script>
+        <script src="static/js/jquery.actual.min.js"></script>
+        <script src="static/js/jquery.elastislide.js"></script>
+        <script src="static/js/jquery.flexslider-min.js"></script>
+        <script src="static/js/jquery.prettyPhoto.js"></script>
+        <script src="static/js/jquery.easing.1.3.js"></script>
+        <script src="static/js/jquery.ui.totop.js"></script>
+        <script src="static/js/jquery.isotope.min.js"></script>
+        <script src="static/js/jquery.easypiechart.min.js"></script>
+        <script src='static/js/jflickrfeed.min.js'></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src='static/js/owl.carousel.min.js'></script>
+        <script src='static/js/jquery.nicescroll.min.js'></script>
+        <script src='static/js/jquery.fractionslider.min.js'></script>
+        <script src='static/js/jquery.scrollTo-min.js'></script>
+        <script src='static/js/jquery.localscroll-min.js'></script>
+        <script src='static/js/jquery.parallax-1.1.3.js'></script>
+        <script src='static/js/jquery.tweet.min.js'></script>
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+
+    </body>
+</html>

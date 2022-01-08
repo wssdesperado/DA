@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Conclusion</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/animations.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <script src="static/js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+         <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+<section id="header">
+    <div class="container"><div class="row">
+
+       <a class="navbar-brand" href=""><img src="static/picture/logo.jpg" weight = 135 height= 50 alt="">  Group Null</a>
+
+      <div class="col-sm-12 mainmenu_wrap"><div class="main-menu-icon visible-xs"><span></span><span></span><span></span></div>
+        <ul id="mainmenu" class="nav menu sf-menu responsive-menu superfish">
+          <li class="active">
+            <a href= "index.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="introduction.html">Intro</a>
+          <li class="dropdown">
+            <a href="data-collection.html">Data</a>
+            <ul class="nav dropdown-menu">
+              <li class="">
+                <a href="data-collection.html">Collection</a>
+              </li>
+              <li class="">
+                <a href="data-cleaning.html">Cleaning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="Analysis.html">Analysis</a>
+          </li>  
+		  <li class="">
+             <a href="finding.html">Findings</a>
+          </li>	
+          <li class="">
+             <a href="conclusion.html">Conclusion</a>
+          </li>		  
+          <li class="">
+             <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      
+    </div></div>
+</section>
+
+
+
+
+<div id="box_wrap">
+
+<section id="abovecontent" class="grey_section">
+  <div class="container"><div class="row">
+      <div class="block col-sm-12">
+        <ul class="breadcrumb">
+          <li><a href="#" class="pathway">Home</a></li>
+          <li><span>Conclusion</span></li>
+        </ul>
+      </div>
+  </div></div>
+</section>
+
+
+<section id="middle" class="">
+    <div class="container">
+        <h2 class="heading-39291">Limitations</h2>
+        <p>In Covid Tracking Dataset there is a lot of missing values. We replaced them by the mean of the four neighbors of each missing value. However, we can’t make sure if this operation would make our analysis not accurate enough or not.</p>
+        <p>To combine all our datasets together, we did some computation to make our datasets have the same date.  We calculated the number and proportion of tweets dominated by each sentiment each day and saved them in units of days.That makes the size of our sentiment dataset reduced, and the fairness is low.</p>
+        <p>We just use social media data from twitter, but there is lots of other social media. We can’t make sure if people would like to post some content on specific social media. So that is a limitation of our research.</p>
+        <h2 class="heading-39291">Ethics Discussion</h2>
+        <p>Our tweets data comes from the Twitter COVID dataset which is collected from the Twitter API. This dataset was collected from January 2020 to September 2021, records the emotional intensity of Twitter users from their responses to the COVID-19 pandemic in the United States. </p>
+        <p>In the process of data collection, according to Twitter API terms, it is ethical not to modify and commercialize the tweet itself. Our analysis did not use the tweet itself, it used the sentiment that has been analyzed from the tweet in the data set, and we did not pay attention to a specific tweet, so we did not have a privacy ethical problem.</p>
+        <p>In our experiments on the relationship between tweet data and people's willingness to vaccinate, there is a certain disparity between the independent variable and the dependent variable. The independent variable only includes people who use Twitter, but the dependent variable is actually the entire population of the United States, which may have a bias problem. We don't have a perfect solution to this problem, but we can try to add some other social media data in follow-up research to enrich our independent variables.
+        </p>
+        <h2 class="heading-39291">Conclusion</h2>
+        <p>People's attitudes towards the Covid-19 are  very diverse and complicated. And we found that there is some relationship between people's attitudes and their willingness to get vaccinated. People’s strong willingness to vaccinate is positively correlated with the severity of the epidemic and hospital situation. Now we can predict people’s willingness to be vaccinated more accurately based on the severity of the epidemic and the situation in the hospital, the highest accurancy can reach 82%. However, people’s willingness to not want to be vaccinated may be affected by more complicated other factors. Will try to solve this problem in the follow-up process.</p>
+        <p>As far as the current situation is concerned, we can not promote people's vaccination only through these malignant influencing factors. The government should find ways to enact some effective policies to dispel people's panic and promote their willingness to vaccinate.</p>
+		
+
+    </div>
+
+  	<div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="citation.html"  class="theme_btn">Citation</a></p>
+			</div>
+</div></div></section>
+
+
+
+<section id="copyright" class="dark_section">
+  <div class="container"><div class="row">
+    
+
+    <div class="col-sm-12">
+      <p id="social" class="text-center">
+        <a class="socialico-twitter" href="#" title="Twitter">#</a>
+        <a class="socialico-facebook" href="#" title="Facebook">#</a>
+        <a class="socialico-google" href="#" title="Google">#</a>
+        <a class="socialico-linkedin" href="#" title="Lindedin">#</a>
+        <a class="socialico-skype" href="#" title="tumblr">#</a>
+      </p>
+      <p class="text-center">Copyright &copy; 2021.Group Null All rights reserved.</p>
+    </div>
+
+  </div></div>
+</section>
+
+</div><!-- EOF #box_wrap -->
+
+<div id="gallery_container"></div>
+
+<!-- <div class="preloader">
+  <div class="preloaderimg"></div>
+</div>
+ -->
+  
+        <script src="static/js/respond.min.js"></script>
+        <script src="static/js/placeholdem.min.js"></script>
+        <script src="static/js/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/hoverIntent.js"></script>
+        <script src="static/js/superfish.js"></script>
+        <script src="static/js/jquery.actual.min.js"></script>
+        <script src="static/js/jquery.elastislide.js"></script>
+        <script src="static/js/jquery.flexslider-min.js"></script>
+        <script src="static/js/jquery.prettyPhoto.js"></script>
+        <script src="static/js/jquery.easing.1.3.js"></script>
+        <script src="static/js/jquery.ui.totop.js"></script>
+        <script src="static/js/jquery.isotope.min.js"></script>
+        <script src="static/js/jquery.easypiechart.min.js"></script>
+        <script src='static/js/jflickrfeed.min.js'></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src='static/js/owl.carousel.min.js'></script>
+        <script src='static/js/jquery.nicescroll.min.js'></script>
+        <script src='static/js/jquery.fractionslider.min.js'></script>
+        <script src='static/js/jquery.scrollTo-min.js'></script>
+        <script src='static/js/jquery.localscroll-min.js'></script>
+        <script src='static/js/jquery.parallax-1.1.3.js'></script>
+        <script src='static/js/jquery.tweet.min.js'></script>
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+
+        <script type="text/javascript" src="static/js/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "ur-6a7e320d-37d8-511-633d-4264e3ae8c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    </body>
+</html>

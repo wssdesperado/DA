@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Basic Statistical Analysis</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="static/css/animations.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <script src="static/js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+         <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+<section id="header">
+    <div class="container"><div class="row">
+
+
+      <a class="navbar-brand" href=""><img src="static/picture/logo.jpg" weight = 135 height= 50 alt="">  Group Null</a>
+
+      <div class="col-sm-12 mainmenu_wrap"><div class="main-menu-icon visible-xs"><span></span><span></span><span></span></div>
+        <ul id="mainmenu" class="nav menu sf-menu responsive-menu superfish">
+          <li class="active">
+            <a href= "index.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="introduction.html">Intro</a>
+          <li class="dropdown">
+            <a href="data-collection.html">Data</a>
+            <ul class="nav dropdown-menu">
+              <li class="">
+                <a href="data-collection.html">Collection</a>
+              </li>
+              <li class="">
+                <a href="data-cleaning.html">Cleaning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="Analysis.html">Analysis</a>
+          </li>  
+          <li class="">
+             <a href="conclusion.html">Conclusion</a>
+          </li>		  
+        </ul>
+      </div>
+      
+    </div></div>
+</section>
+
+
+
+<div id="box_wrap">
+
+<section id="abovecontent" class="grey_section">
+  <div class="container"><div class="row">
+      <div class="block col-sm-12">
+        <ul class="breadcrumb">
+          <li><a href="#" class="pathway">Home</a></li>
+          <li><span>Analysis / Basic Statistical Analysis</span></li>
+        </ul>
+      </div>
+  </div></div>
+</section>
+
+
+<section id="middle" class="">
+    <div class="container">
+
+
+        <h2 class="heading-39291">Basic Statistical Analysis</h2>
+        <h2 class="heading-39291">Hypothesis 1</h2>
+        <p>The influence of people's tweeting mood on vaccine willingness on social media.Increased fear and sadness may increase people's willingness to get vaccinated.</p>
+        <h2 class="heading-39291">Regression</h2>
+        <p>We used regression to find if there is a relation between people’s willingness to get vaccinations and the distribution of emotions in tweets.</p>
+        <p>The emotional atmosphere of COVID-19 on twitter will affect people's view of COVID-19, thereby influencing their decision to vaccinate, because not everyone knows the virus very well, so people are subject to social media to decide whether to vaccinate. </p>
+        <p>We guess it is possible if most people are afraid of COVID-19, then there might be more people willing to get vaccination. It might have a different influence on people due to the different emotions. Based on this hypothesis, we implemented linear regression to find each emotion’s influence .First of all, we combine two datasets (twitter emotion dataset and Covid-19 act now dataset) into one dataset. Using anger', 'fear', 'happiness', 'no specific emotion', 'sadness' the emotion’s attribute as X-values, using changes (difference between the number of vaccinations on the day and the previous day) as Y-value to train linear regression( the data is range from 2021-1-15 to 2021-8-30 amount to 230 pieces of data).After that, we get a linear regression line and a curve between predicted value and test value :</p>
+        <div><img src="images/basic1.png" alt="Image" class="img-fluid" width = "500" height = "350"></div>
+        <p>Regression line : Y =  103919.12 + 4.25 * anger  - 11.63 * fear - 4.22 * happiness - 4.22 * no specific - 19.03 *sadness</p>
+        <p>The regression line couldn’t predict well, it is affected by the small amount of data, which also affects the results of the regression line. Even though its performance is not good, it can partly reflect the trend of changes. So, we can say there is a relation between them.</p>
+        <p>Based on the regression line, we think that we can get some indication about the emotion’s effect. The coefficient of fear, happiness and sadness is negative. So we guess a happy atmosphere may make people less worried about COVID-19. But it is weird that fear and sadness are also negative, it might because people will ignore some negative information. And when most people are angry about COVID-19, most people might be aware of the seriousness of the virus and then they are willing to vaccinate.</p>
+    </div>
+ 	<div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="Analysis.html"  class="theme_btn">Back</a></p>
+			</div>
+		 <div class="col-sm-4 block" align = right>
+			<p class="view-project"><a href="ml_stat.html"  class="theme_btn">Next</a></p>
+  </div>
+</div></div></section>
+</div></div></section>
+<section id="copyright" class="dark_section">
+  <div class="container"><div class="row">
+    
+
+    <div class="col-sm-12">
+      <p id="social" class="text-center"></p >
+
+      <p class="text-center">Copyright &copy; 2021.Group Null All rights reserved.</p >
+    </div>
+
+  </div></div>
+</section>
+
+
+</div><!-- EOF #box_wrap -->
+
+<div id="gallery_container"></div>
+
+<!-- <div class="preloader">
+  <div class="preloaderimg"></div>
+</div>
+ -->
+  
+        <script src="static/js/respond.min.js"></script>
+        <script src="static/js/placeholdem.min.js"></script>
+        <script src="static/js/jquery-1.10.2.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+        <script src="static/js/hoverIntent.js"></script>
+        <script src="static/js/superfish.js"></script>
+        <script src="static/js/jquery.actual.min.js"></script>
+        <script src="static/js/jquery.elastislide.js"></script>
+        <script src="static/js/jquery.flexslider-min.js"></script>
+        <script src="static/js/jquery.prettyPhoto.js"></script>
+        <script src="static/js/jquery.easing.1.3.js"></script>
+        <script src="static/js/jquery.ui.totop.js"></script>
+        <script src="static/js/jquery.isotope.min.js"></script>
+        <script src="static/js/jquery.easypiechart.min.js"></script>
+        <script src='static/js/jflickrfeed.min.js'></script>
+        <script src="static/js/jquery.sticky.js"></script>
+        <script src='static/js/owl.carousel.min.js'></script>
+        <script src='static/js/jquery.nicescroll.min.js'></script>
+        <script src='static/js/jquery.fractionslider.min.js'></script>
+        <script src='static/js/jquery.scrollTo-min.js'></script>
+        <script src='static/js/jquery.localscroll-min.js'></script>
+        <script src='static/js/jquery.parallax-1.1.3.js'></script>
+        <script src='static/js/jquery.tweet.min.js'></script>
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+
+        <script type="text/javascript" src="static/js/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "ur-6a7e320d-37d8-511-633d-4264e3ae8c", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    </body>
+</html>
